@@ -59,12 +59,13 @@ else:
     df_filtrado = top_clientes_por_oficina
 
 # Mostrar tabla
+
 st.subheader("📋 Top 10 clientes únicos con mayor riesgo por oficina")
 st.dataframe(
     df_filtrado[["OFICINA", "NOMBRE CLIENTE", "SCORE_RIESGO", "PREDICCION_INCOBRABLE"]],
     height=400,
-    use_container_width
-
+    use_container_width=True
+)
 
 # Gráfico de riesgo promedio
 st.subheader("📈 Riesgo promedio por oficina")
