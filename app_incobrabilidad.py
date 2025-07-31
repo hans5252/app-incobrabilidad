@@ -19,8 +19,7 @@ st.title("📊 Predicción de Incobrabilidad por Oficina")
 
 df = pd.read_excel("Base APP.xlsx", sheet_name="Hoja1", engine="openpyxl")
 
-
-    cols_numericas = ["DEUDA TOTAL", "DEUDA VENCIDA", "MOROSIDAD", "CRÉDITO VIGENTE", "PROMEDIO DE PAGOS"]
+cols_numericas = ["DEUDA TOTAL", "DEUDA VENCIDA", "MOROSIDAD", "CRÉDITO VIGENTE", "PROMEDIO DE PAGOS"]
     for col in cols_numericas:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
